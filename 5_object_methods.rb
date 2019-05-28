@@ -1,4 +1,4 @@
-foo = "Hello world"
+foo = 'Hello world'
 
 p foo.length
 
