@@ -10,12 +10,13 @@ p stupid.class
 p smart.class
 
 p '--------------'
-#  * Chek if it true or false not for float numbers
+# * Chek if it true or false not for float numbers
 p 10.odd?
 p 10.even?
+p 10.between?(1, 20)
 
 p '--------------'
-#  * Compare operator returns boolean
+# * Compare operator returns boolean
 # true
 p 10 == 10
 
