@@ -49,7 +49,6 @@ end
 end
 
 p '----------------'
-
 # * from to and iteration step size
 1.step(10, 2) { |step_number| p "Step number: #{step_number + 1}" }
 1.step(10, 3) { |step_number| p "Step number: #{step_number}" }
