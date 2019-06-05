@@ -16,10 +16,17 @@ a, b = b, a
 
 p a, b, c
 
-# constant 
+# constant
 I_AM_CONSTANT = 10
 
 # couse error
 # I_AM_CONSTANT = 11
 
 p I_AM_CONSTANT
+
+p '----Conditional assigment ---------'
+
+y = nil
+p y
+# * assign new value only if current value is nil
+y ||=5

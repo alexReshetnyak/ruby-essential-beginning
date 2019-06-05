@@ -69,18 +69,29 @@ end
 
 authenticate_agent('007', 'James Bond', 'Spy')
 
-p '------------------'
-def meal_plan(time_of_week, time_of_day)
-  if time_of_week == 'weekday'
-    if time_of_day == 'breakfarst'
-      'cereal'
-    end
+p '----Negation with !----'
+p !true
+p !!3.14
 
-  elsif time_of_week == 'weekend'
-    if time_of_day == 'lunch'
-      'BBQ Chicken pizza'
-    end
-  end
+
+p '----unless keyword----'
+password = 'topsecret'
+
+# * unless is the oposite of if
+unless password == 'whiskers'
+  p 'not allowed'
+else
+  p 'There is right password'
 end
 
-p meal_plan('weekend', 'lunch')
+
+p '-------ternaty operator------'
+p 1 < 2 ? 'yes' : 'no'
+
+pokemon = 'Pikachu'
+p pokemon == 'Charizard' ? 'Fireball' : 'Thats not Charizard'
+
+
+p '------Statement modifires------'
+number = 500
+p 'Huge number' if number > 400
