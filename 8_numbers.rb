@@ -20,3 +20,10 @@ p str.to_f
 p str
 
 p str.to_i.to_s
+
+p '-----random numbers--------'
+p rand
+p rand.round(2)
+
+# * Get random number from 1 to 40
+p rand(1..40)

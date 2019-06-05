@@ -24,9 +24,10 @@ I_AM_CONSTANT = 10
 
 p I_AM_CONSTANT
 
-p '----Conditional assigment ---------'
 
+p '----Conditional assigment ---------'
 y = nil
 p y
 # * assign new value only if current value is nil
-y ||=5
+y ||= 5
+p y
