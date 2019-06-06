@@ -12,6 +12,7 @@ p numbers2.first(4)
 
 p '----alphabet range ------'
 letters_range = 'A'..'z'
+# * get first 40 items
 p letters_range.first(40)
 
 p '--------size method---------'

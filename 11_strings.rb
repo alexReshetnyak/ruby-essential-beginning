@@ -58,10 +58,11 @@ p first += second
 # * concat will overwrite the original string
 first.concat(three)
 p first
-# * the alike concat but added second to the beginning of a string
+# * prepend alike concat but added string to the beginning
 first.prepend(second)
 p first
 
+# * << - is a shovel operator work like push
 p first << second << 'extra'
 
 p '--------Length and size----------'
