@@ -54,6 +54,17 @@ end
 
 make_phone_call(7777, 22)
 
+p '-----splat arguments------'
+# * splat work like ... in JS
+def sum(*numbers)
+	sum = 0
+
+	numbers.each { |num| sum += num }
+
+  sum
+end
+
+p sum(1, 2, 3, 4)
 
 p '------respond_to method-------'
 num = 1000

@@ -46,3 +46,18 @@ p sentense.split('a')
 p '-----join method-------'
 names = ['joe', 'moe', 'bob']
 p names.join(' - ')
+
+
+p '-----any? method-------'
+
+# * worked like js every() returns true if atleast one true
+p [1, 2, 3, 4].any? do |number|
+  number > 3
+end
+
+p '-----all? method-------'
+# * worked like js every() returns true if all true
+result = [1, 2, 3, 4].all? do |n|
+  n > 1
+end
+p result
