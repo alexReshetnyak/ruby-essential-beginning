@@ -6,9 +6,11 @@ p channels.values_at(0)
 # * 0 and 2 - indexes
 p channels.values_at(0, 2)
 
+
 p '-----slice method-----'
 p channels.slice(2)
 p channels.slice(2, 1)
+
 
 p '------length and size--------'
 p channels.length
@@ -16,6 +18,7 @@ p channels.size # * a litle bit faster
 
 # * count how many 2 in this array
 p numbers.count(2)
+
 
 p '------empty? nil?--------'
 # * alike numbers.length == 0
@@ -54,6 +57,7 @@ p numbers
 numbers.insert(1, 1001, 1002)
 p numbers
 
+
 p '------pop--------'
 # * remove one element from the ebd
 numbers.pop
@@ -63,6 +67,7 @@ p numbers
 numbers.pop(2)
 p numbers
 
+
 p '----shift unshift----'
 # * remove item from start
 numbers.shift
@@ -70,6 +75,7 @@ p numbers
 
 numbers.unshift('1')
 p numbers
+
 
 p '----Equality----'
 a = [1, 2, 3]
@@ -87,6 +93,7 @@ p letters
 letters = letters.to_a
 # * get part of array from 3 to 10
 p letters[3..10]
+
 
 p '----Check if array-----'
 p [1, 2, 3].class == Array

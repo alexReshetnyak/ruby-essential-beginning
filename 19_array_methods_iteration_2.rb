@@ -23,6 +23,7 @@ end
 p "All odds: #{odds}"
 p "All evens: #{evens}"
 
+
 p '-----each within each------'
 shirts = ['striped', 'plain white', 'plaid']
 ties = ['polka', 'solid color', 'boring']
@@ -33,10 +34,12 @@ shirts.each do |shirt|
   end
 end
 
+
 p '-----each with index------'
 numbers.each_with_index do |number, index|
   p "Number: #{number}, index: #{index}"
 end
+
 
 p '----for loop---'
 numbers = [1, 2, 3]
@@ -48,9 +51,11 @@ end
 # * with for we see num variable here (not good)
 p num
 
+
 p '-------map-----------'
 new_squares = numbers.map{ |number| number**2 }
 p new_squares
+
 
 p '------ iteration over array using while ------'
 i = 0
@@ -62,6 +67,7 @@ while i < arrKeys.length
   i += 1
 end
 
+
 p '------ iteration over array using until ------'
 ind = 0
 until ind >= arrKeys.length
@@ -72,6 +78,7 @@ until ind >= arrKeys.length
 
   p arrKeys[old_ind]
 end
+
 
 p '------ reverse ------'
 p numbers.reverse

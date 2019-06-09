@@ -77,3 +77,21 @@ p '---convert hash to array---'
 p shopping_list.to_a
 p shopping_list.to_a.flatten
 p shopping_list.to_a.to_h # * convert to array and than to hash
+
+p '---hash as method argument---'
+def calculate_total(price, tip, tax)
+  tax_amount = price * tax
+  tip_amount = price * tip
+  price + tip_amount + tax_amount
+end
+
+p calculate_total(22, 0.18, 0.07)
+
+def calculate_total_2(info)
+  tax_amount = info[:price] * info[:tax]
+  tip_amount = info[:price] * info[:tip]
+  info[:price] + tip_amount + tax_amount
+end
+
+p calculate_total_2({ price: 22, tip: 0.18, tax: 0.07 })
+p calculate_total_2( price: 22, tip: 0.18, tax: 0.07 ) # * if hash is a last argument you can exclude braces

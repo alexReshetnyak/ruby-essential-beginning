@@ -14,12 +14,14 @@ p '----Shorthand way to create array with strings -----'
 names = %w[Jack Jill James]
 p names
 
+
 p '------Different method to create new array-------'
 p Array.new
 # * array with 10 nil
 p Array.new(10)
 p Array.new(10, 'value')
 p Array.new(10, [1, 2, 3])
+
 
 p '-------Access to single element---------'
 fruits = ['apple', 'orange', 'grape']
@@ -37,12 +39,14 @@ p fruits.fetch(2)
 # * if nil return value
 p fruits.fetch(20, 'value doesnt exist')
 
+
 p '------like slice get part of array------'
 # * from number to get
 p numbers[2, 4]
 # * get piece of array from 1 to 4 indexes
 p numbers[1..4]
 p numbers[1...4]
+
 
 p '------Overwrite value---------'
 fruits[2] = 'watermelon'
@@ -59,6 +63,7 @@ p fruits
 # * will remove one value from list
 fruits[8..9] = ['value 9']
 p fruits
+
 
 p '----Spaceship operator----'
 # * return 0 if values equal
