@@ -92,3 +92,4 @@ p '----Check if array-----'
 p [1, 2, 3].class == Array
 p [1,2,3].is_a?(Array)
 p [1,2,3].is_a?(Object)
+

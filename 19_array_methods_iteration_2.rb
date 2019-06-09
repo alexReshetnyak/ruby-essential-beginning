@@ -80,21 +80,4 @@ p numbers.reverse
 numbers.reverse!
 p numbers
 
-p '------sort method-------'
-numbers = [5, 13, 1, -2, 8]
-words = %w[caterpillar kangaroo apple Zebra]
 
-p numbers.sort
-p words.sort
-
-p numbers.sort.reverse
-p words.sort.reverse
-
-p '------concat method-------'
-p [1,2,3] + [4, 5, 6]
-p [1,2,3].concat([4, 5, 6])
-
-p '------max and min methods------'
-stock_prices = [2.3, 3.2, 5.6, 1.6]
-p stock_prices.max
-p stock_prices.min
