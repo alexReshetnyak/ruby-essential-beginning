@@ -31,7 +31,7 @@ p numbers.find_index(100) # * work the same
 
 
 p '-----select method-------'
-# * return array (like filter)
+# * return array (like JS filter)
 filtered_numbers = numbers.select do |item|
   item >= 3
 end
