@@ -7,8 +7,8 @@ p arrKeys
 
 
 p '-----each iteration through-----'
-arrKeys.each do |key|
-  p "This is #{key}"
+arrKeys.each do |letter|
+  p "This is #{letter}"
 end
 
 arrKeys.each {|key| p key.upcase}
