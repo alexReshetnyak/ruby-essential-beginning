@@ -58,3 +58,5 @@ end
 p convert(1000, to_euros)
 p convert(1000, to_pesos)
 p convert(1000, to_rupees)
+
+p [100, 200, 300].map(&to_euros)
