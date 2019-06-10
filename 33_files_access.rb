@@ -16,7 +16,18 @@ end
 
 p '-----rename and delete file-----'
 # File.rename('novel.txt', 'newName.txt') # * permission denied (windows problem)
-
 if File.exist?('novel.txt')
   # File.delete('novel.txt') # * permission denied (windows problem)
 end
+
+
+p '---get access to other file---'
+p 'This is beginning!'
+load './end.rb' # * transfer control to remote file
+p 'This was successful'
+
+
+p '---require and require_relative methods ---'
+p 'This is beginning!'
+require './end'
+require_relative 'end' # * look for file in the same folder
