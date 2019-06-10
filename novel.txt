@@ -1,0 +1,3 @@
+new string from ruby
+The same like puts but do not add line break.  Good!
+some string added to the end of the file (append)
