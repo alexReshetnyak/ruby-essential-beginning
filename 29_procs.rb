@@ -66,7 +66,7 @@ p ['1', '2', '3'].map(&:to_i) # * use ruby to_i method as Proc
 p [1, 2, 3, 4, 5].select(&:even?)
 
 p '-----method with Proc parameters----'
-def talk_about(name, &myproc)
+def talk_about(name, myproc)
   p "Let me tell you about #{name}"
 
   myproc.call(name)
@@ -80,5 +80,5 @@ bad_things = Proc.new do |name|
   p "#{name} is a dolt!"
 end
 
-talk_about('Alex', &good_things)
-talk_about('Brock', &bad_things)
+talk_about('Alex', good_things)
+talk_about('Brock', bad_things)
