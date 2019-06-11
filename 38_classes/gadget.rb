@@ -7,8 +7,28 @@ class Gadget
     @production_number = rand(1..100)
   end
 
+  attr_accessor :password, :production_number # * Getter and setter in the same time
+  # attr_reader :password # * getter
+  # attr_writer :password # * setter
+
   def info # * public method
-    "Gadget #{@production_number} has username #{@username}"
+    "Gadget #{self.get_production_number} has username #{@username}, Class: #{self.class}"
+  end
+
+  def get_production_number
+    @production_number
+  end
+
+  def username # * Getter
+    @username
+  end
+
+  def username=(new_name) # * Setter
+    @username = new_name
+  end
+
+  def to_s
+    "Overwrited .to_s method, username #{@username}"
   end
 end
 
@@ -36,9 +56,28 @@ p phone == laptop # * false
 p '---------Instance variables------------'
 p phone.instance_variables
 
-p '---------Instance methods------------'
+p '-----Instance methods--------'
 p phone.info
 p phone.methods - Object.methods # * => [:info]
 
 p '---overwrite .to_s method----'
 p phone.respond_to?(:to_s)
+p phone.to_s
+
+p '---self keyword----'
+p phone.info
+
+p '---getter method----'
+p phone.username
+
+p '---setter method----'
+phone.username = 'New username'
+p phone.username
+
+p '-----accessor methods------'
+p phone.password
+p phone.production_number
+phone.password = 'new password'
+phone.production_number = 'new production number'
+p phone.password
+p phone.production_number
