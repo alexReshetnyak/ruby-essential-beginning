@@ -18,6 +18,13 @@ p phrase.scan(/\./) # * => ["."]
 # * \D - any non digit
 # * \s - any whitespace symbol
 # * \S - no whitespace symbol
+# * \w	Any word character (letter, number, underscore)
+# * [^abc]	Any single character except: a, b, or c
+# * ^	Start of line
+# * .	Any single character
+# * $	End of line
+# * \A	Start of string
+# * \z	End of string
 
 p '-----anchors------'
 p phrase.scan(/\A\d/) # * \A search only from the begining

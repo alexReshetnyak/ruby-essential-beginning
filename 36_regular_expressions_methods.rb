@@ -1,3 +1,5 @@
+# * https://rubular.com/ - website regular expression editor
+
 p '-----start_with? end_with? methods-----'
 phrase = 'Ruby is amazing programming 555-44 language'
 
@@ -28,3 +30,11 @@ p phrase.scan(/am/) # * return array with all matchces => ["am", "am"]
 p phrase.scan(/[am]/) # * => ["a", "m", "a", "a", "m", "m", "a", "a"]
 p phrase.scan(/\d+/) # * \d+ - any digit character one or more times => ["555", "44"]
 p phrase.scan(/\d+/) { |digit_found| p 'Digit Match: ' + digit_found.to_s } # * \d+ - any digit character one or more times => ["555", "44"]
+
+
+p '---sub and gsub methods----'
+# * will change first found character
+p 'whimper'.sub('m', 's') # * => "whisper"
+# * will change all found character
+p 'an apple'.gsub('a', 'A') # * => "An Apple"
+p "(555)-555 1234".gsub(/[-\s\(\)]/, '') # * => "5555551234"
