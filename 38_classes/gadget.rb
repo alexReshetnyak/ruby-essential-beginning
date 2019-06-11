@@ -1,9 +1,9 @@
 p '----Create a class----'
 
 class Gadget
-  def initialize # * worked like constructor method in JS, it calls every time when we creat new object (private)
-    @username = "Username is User-#{rand(1..100)}" # * Instance variable (private)
-    @password = 'topsecret'
+  def initialize(username = 'default name', password = 'default password') # * worked like constructor method in JS, it calls every time when we creat new object (private)
+    @username = username # * Instance variable (private)
+    @password = password
     @production_number = rand(1..100)
   end
 
@@ -81,3 +81,7 @@ phone.password = 'new password'
 phone.production_number = 'new production number'
 p phone.password
 p phone.production_number
+
+p '----add parameters to initialize method----'
+phone2 = Gadget.new('Alex', 'some123')
+p phone2.username
