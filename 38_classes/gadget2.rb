@@ -13,7 +13,7 @@ class Gadget
   end
 
   def to_s
-    "Overwrited .to_s method, username #{@username}"
+    "Overwrited .to_s method, username #{username}"
   end
 
   def password=(new_password) # * custom setter method, overwrite attr_accessor
