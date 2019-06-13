@@ -1,4 +1,5 @@
 p '----Create a class----'
+require_relative 'app_store'
 
 class Gadget
   # attr_writer :password  # * Getter and setter in the same time
@@ -16,7 +17,18 @@ class Gadget
     "Overwrited .to_s method, username #{@username}"
   end
 
+  def install_app(name)
+    app = AppStore.find_app(name)
+    @apps << app unless @apps.include?(app)
+  end
+
+  def delete_app(name)
+    app = apps.find { |instaled_app| instaled_app.name == name }
+    apps.delete(app) unless app.nil?
+  end
+
   def password=(new_password) # * custom setter method, overwrite attr_accessor
+    p new_password
     @password = new_password if validate_password(new_password)
   end
 
@@ -44,15 +56,14 @@ class Gadget
   end
 end
 
-phone = Gadget.new('user', 'password123')
-p phone.production_number
-p phone.password
-p phone.username
-phone.password = '1234567'
-p phone.password
+g = Gadget.new('Alex', 'password1')
+p g.apps
+g.install_app(:Chat)
+g.install_app(:Chat)
+g.install_app(:Twitter)
+p g.apps
 
-p '--------Multiple setter-------------'
-phone.reset('reseted_username', 'reseted_password_1')
-p phone.password
-p phone.production_number
-p phone.username
+p '-------------'
+g.delete_app(:Chat)
+p g.apps
+p g.apps[0][:developer]
