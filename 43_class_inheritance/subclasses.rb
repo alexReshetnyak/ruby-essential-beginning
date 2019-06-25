@@ -18,7 +18,7 @@ class Manager < Employee # * inheritance, subclass inherits superclass
     @rank = rank
   end
 
-  def yell
+  def yell # * just a method name
     'Who is the boss? I am the boss!'
   end
 
@@ -33,7 +33,7 @@ class Worker < Employee
     "Starting my shift at #{time}"
   end
 
-  def yell
+  def yell # * just a method name
     'I am working! I am working!'
   end
 end
