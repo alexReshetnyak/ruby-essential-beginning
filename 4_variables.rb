@@ -31,3 +31,26 @@ p y
 # * assign new value only if current value is nil
 y ||= 5
 p y
+
+
+p '---------Global Variables-----------'
+$global_var = 10
+not_global = 11
+
+p $global_var
+
+def check_var
+  p $global_var
+  # * p not_global - will cause error message
+
+  def check_var2
+    p $global_var
+    $global_var2 = 12
+  end
+end
+
+check2 = check_var
+check2
+p $global_var2 # * => nil
+p $not_existing_global_var # * => nil
+# p not_existing_local_var # * will cause error message

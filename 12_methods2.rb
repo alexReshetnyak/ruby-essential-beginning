@@ -34,12 +34,12 @@ p result
 
 
 p '--------methods returns-----------'
-def nameNil
+def name_nil
 	# p 'data' will return 'data'
 	puts 'data'
 end
 
-p nameNil
+p name_nil
 
 def implicitReturn
 	'some data to return'
