@@ -25,6 +25,10 @@ p phrase.scan(/\./) # * => ["."]
 # * $	End of line
 # * \A	Start of string
 # * \z	End of string
+# * //m - dont matches newline
+# * //i - ruby regex case insensitive
+# * //x - ignore whitespace
+# * /\d*?z/ - non-greedy search, find all numbers until first 'z' (greedy - will search all numbers until last z) in string
 
 p '-----anchors------'
 p phrase.scan(/\A\d/) # * \A search only from the begining
