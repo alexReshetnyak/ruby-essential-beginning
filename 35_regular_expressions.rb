@@ -25,7 +25,7 @@ p phrase.scan(/\./) # * => ["."]
 # * $	End of line
 # * \A	Start of string
 # * \z	End of string
-# * //m - dont matches newline
+# * //m - multiline mode ( (?m) is the modifier for multi-line mode, (?s) is the modifier for single-line mode. )
 # * //i - ruby regex case insensitive
 # * //x - ignore whitespace
 # * /\d*?z/ - non-greedy search, find all numbers until first 'z' (greedy - will search all numbers until last z) in string

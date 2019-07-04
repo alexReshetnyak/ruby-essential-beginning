@@ -1,7 +1,7 @@
-# * Procs is more effitient way to do something in a loop
+# * Procs is more effitient way to do something in a loop (anonymous function)
 # * You can use Proc everywhere instead block
 
-cubes = Proc.new { |number| number ** 3 }
+cubes = proc { |number| number ** 3 }
 squares = Proc.new { |number| number ** 2 }
 
 a = [1, 2, 3, 4, 5]
@@ -76,9 +76,13 @@ good_things = Proc.new do |name|
   p "#{name} is a genius!"
 end
 
-bad_things = Proc.new do |name|
+bad_things = proc do |name|
   p "#{name} is a dolt!"
 end
 
+wors_things = ->(name) { p "#{name} is awful" }
+
 talk_about('Alex', good_things)
 talk_about('Brock', bad_things)
+talk_about('Gary', wors_things)
+

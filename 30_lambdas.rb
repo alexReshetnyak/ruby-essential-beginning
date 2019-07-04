@@ -9,7 +9,7 @@ p [1, 2, 3].map(&squares_lambda)
 p squares_lambda.call(5) # * Call lambda with an argument
 
 p '----difference 1 not passed arguments---'
-some_proc = Proc.new { |name, age| "Your name: #{name}, age: #{age}"}
+some_proc = proc { |name, age| "Your name: #{name}, age: #{age}"}
 some_lambda = lambda { |name, age| "Your name: #{name}, age: #{age}"}
 
 p some_proc.call('Alex', 31)
