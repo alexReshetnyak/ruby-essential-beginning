@@ -1,3 +1,5 @@
+# ! This code will work only in terminal
+
 puts "Hi what's your name"
 
 # gets is blocking method, chomp will delete \n simbol

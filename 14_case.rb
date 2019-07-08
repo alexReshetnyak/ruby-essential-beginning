@@ -5,10 +5,6 @@ def add(a,b)
   a + b
 end
 
-def substract(a, b)
-  a - b
-end
-
 def calculator(a, b, operator = 'add')
   if operator == 'add'
     "The result is: #{add(a, b)}"
@@ -17,6 +13,10 @@ def calculator(a, b, operator = 'add')
   else
     'That is not a real operation, genius!'
   end
+end
+
+def substract(a, b)
+  a - b
 end
 
 p calculator(2, 3, 'add')

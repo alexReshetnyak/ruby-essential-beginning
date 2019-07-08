@@ -10,14 +10,6 @@ c = [11, 12, 13, 14, 15]
 
 a_cubes, b_cubes, c_cubes = [a, b, c].map { |array| array.map(&cubes) } # * activate Proc
 
-# a_cubes = a.map(&cubes) # * activate Proc
-# b_cubes = b.map(&cubes) # * activate Proc
-# c_cubes = c.map(&cubes) # * activate Proc
-
-# a_cube = a.map { |num| num ** 3 }
-# b_cube = b.map { |num| num ** 3 }
-# c_cube = c.map { |num| num ** 3 }
-
 p a_cubes
 p b_cubes
 p c_cubes
@@ -54,7 +46,6 @@ def greeter(string1)
   yield
 end
 
-
 phrase = Proc.new do
   p 'Inside the proc'
 end
@@ -82,11 +73,11 @@ bad_things = proc do |name|
   p "#{name} is a dolt!"
 end
 
+wors_things = ->(name) { p "#{name} is awful" }
+
 def method2(data)
   p data
 end
-
-wors_things = ->(name) { p "#{name} is awful" }
 
 talk_about('Alex', good_things)
 talk_about('Brock', bad_things)

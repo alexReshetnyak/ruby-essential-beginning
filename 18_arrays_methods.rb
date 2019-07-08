@@ -1,6 +1,7 @@
 channels = ['cbs', 'fox', 'nbc', 'espn', 'upn']
 numbers = [1, 2, 3, 4, 5, 6, 7, 8, nil]
 
+p '-----values_at method-----'
 # * Get value at position return always array
 p channels.values_at(0)
 # * 0 and 2 - indexes
@@ -81,10 +82,15 @@ p '----Equality----'
 a = [1, 2, 3]
 b = [1, 2, 3]
 c = [1, 2, 3, 4]
-d = [1, 2, 5]
+d = [1, 2, {:data => 'some data'}]
+e = [1, 2, {:data => 'some data'}]
+f = [1, 2, {:data => 'some data2'}]
 
 p a == b # * return true
 p a == c # * return false
+p a == d # * => false
+p d == e # * => true
+p d == f # * => false
 
 
 p '------Convert range to array (.to_a)------'

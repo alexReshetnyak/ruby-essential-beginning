@@ -3,10 +3,10 @@ p 1.next()
 p 1 + 2
 p 1.+(2)
 
-p '----------------'
-p 9.between?(1, 9.0)
+p '--------between?--------'
+p 9.between?(1, 9.0) # * => true
 
-p '----------------'
+p '-------to_i floor ceil round round(2) abs---------'
 p 10.1.to_i
 p 10.1.floor
 p 10.1.ceil
@@ -15,13 +15,13 @@ p 10.1546.round(2)
 # * always positive
 p -10.222.abs
 
-p '----------------'
+p '-------+=---------'
 a = 5
 a = a + 5
 a += 5
 p a
 
-p '----------------'
+p '-------times---------'
 # * Execute 10 times
 3.times { |count| p "Alex the best #{count}" }
 
@@ -32,23 +32,15 @@ p '----------------'
   p 'It true'
 end
 
-p '----------------'
-10.times do |count|
-  puts "#{3 * (count + 1)}"
-end
-
-p '----------------'
+p '-------downto-upto--------'
 # * reverse times
 3.downto(0) { |i| p i }
-3.downto(0) do |curr_number|
-  p curr_number
-end
 
-5.upto(10) do |i|
+8.upto(10) do |i|
   p i
 end
 
-p '----------------'
+p '-------step---------'
 # * from 1 to 10 and iteration step size 2
 1.step(10, 2) { |step_number| p "Step number: #{step_number + 1}" }
 1.step(10, 3) { |step_number| p "Step number: #{step_number}" }

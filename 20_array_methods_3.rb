@@ -36,22 +36,23 @@ filtered_numbers = numbers.select do |item|
   item >= 3
 end
 
-p filtered_numbers
+p filtered_numbers # * => [3, 4, 5, 6]
 
 
 p '-----reject method-------'
 # * oposite of select
 result = numbers.reject { |number| number >= 3 }
-p result
+p result # * => [1, 2]
 
 
 p '-----unpack multidimensional array-------'
 users = [['Bob', 25, 'male'], ['Susan', 21, 'female']]
-p users[1][2]
+p users[1][2] # * => "female"
+p users[1][0, 2] # * => ["Susan", 21]
 
 bob, susan = users
-p bob
-p susan
+p bob # * => ["Bob", 25, "male"]
+p susan # * => ["Susan", 21, "female"]
 
 
 p '-----partition method-------'

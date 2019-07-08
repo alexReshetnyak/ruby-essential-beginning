@@ -1,6 +1,6 @@
 def pass_control
   p 'This is inside method'
-  yield # * pass control from method to the block
+  yield # * pass control from method to block
   p 'Now I am back inside the method'
 end
 

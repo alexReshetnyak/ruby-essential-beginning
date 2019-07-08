@@ -18,10 +18,10 @@ p '-------Create string-----------'
 p 5.to_s
 
 p '--------Multiline string----------'
-words = <<MLS
+words = <<ANY_NAME
 This is my name #{name}
 and my last name #{last_name}
-MLS
+ANY_NAME
 
 print words
 
