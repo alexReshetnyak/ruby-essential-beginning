@@ -48,16 +48,18 @@ p ages.select { |age| filter_age(age) }
 
 
 p '--------proc + yield---------'
-def greeter
+def greeter(string1)
   p 'I am inside greeter'
+  p string1
   yield
 end
+
 
 phrase = Proc.new do
   p 'Inside the proc'
 end
 
-greeter(&phrase)
+greeter('parametr for method', &phrase)
 
 
 p '-----pass method as Proc----'
@@ -80,9 +82,13 @@ bad_things = proc do |name|
   p "#{name} is a dolt!"
 end
 
+def method2(data)
+  p data
+end
+
 wors_things = ->(name) { p "#{name} is awful" }
 
 talk_about('Alex', good_things)
 talk_about('Brock', bad_things)
 talk_about('Gary', wors_things)
-
+talk_about('Liza', method(:method2)) # * creates proc from method
