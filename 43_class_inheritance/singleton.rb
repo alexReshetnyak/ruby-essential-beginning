@@ -25,3 +25,22 @@ p alex.singleton_methods # * => [:play_game]
 
 p alex.singleton_class # * => #<Class:#<Player:0x0000000002746218>>
 p bob.singleton_class # * => #<Class:#<Player:0x0000000002736218>>
+
+
+puts
+p '--------Right version of singleton---------'
+
+class Logger
+  private_class_method :new
+  @@logger = nil
+  def Logger.create
+    @@logger = new unless @@logger
+    @@logger
+  end
+end
+
+logger = Logger.create
+logger2 = Logger.create
+
+p logger.object_id
+p logger2.object_id
