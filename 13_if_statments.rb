@@ -93,5 +93,7 @@ p pokemon == 'Charizard' ? 'Fireball' : 'Thats not Charizard'
 
 
 p '------Statement modifires------'
-number = 500
+number = 100
+number = number && 600
+
 p 'Huge number' if number > 400
