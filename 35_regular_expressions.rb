@@ -11,6 +11,7 @@ p phrase =~ /x/ # * => nil
 p '-----Wildcard symbol------'
 p phrase =~ /.am/ # * '.' - is mean find any single character
 p phrase.scan(/.am/) # * => ["ram", " am"]
+p phrase.match(/.am/).to_s # * => "ram"
 
 p '-----Backslash symbol------'
 p phrase.scan(/\./) # * => ["."]
@@ -37,3 +38,9 @@ p phrase.scan(/\d\z/) # * \z indicate end of the string
 p '-----exclude characters------'
 p phrase.scan(/[^abcdefghijklmnorstuv, \s\d\.]/) # * '^' - mean ignore characters abcd... => ["T", "R", "y", "p", "z"]
 
+p '----Result to global variable----'
+re = /(\d+):(\d+)/
+md1 = re.match("Time: 12:34am")
+md2 = re.match("Time: 10:30pm")
+[ $1, $2 ]   # * last successful match	»	["10", "30"]
+print($1, ' ', $2)

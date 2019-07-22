@@ -13,15 +13,19 @@ puts age + 2
 
 a, b, c = 1, 2, 3
 a, b = b, a
-
 p a, b, c
 
+p '-----------------------'
+x = 0	
+a, b, c = x, (x += 1), (x += 1) # * =>	[0, 1, 2]
+p a, b, c
+
+p '------Constant-------'
 # constant
 I_AM_CONSTANT = 10
 
 # couse error
 # I_AM_CONSTANT = 11
-
 p I_AM_CONSTANT
 
 

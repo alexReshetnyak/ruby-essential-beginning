@@ -77,7 +77,18 @@ if num.respond_to?('length')
   p num.length
 end
 
-# * :next is a symbol and equal to 'next' but with out embedded methods that's why it very light
+# * :next is a symbol and equal to 'next' but without embedded methods that's why it very light
 p 'hello'.respond_to?(:next)
 p 'hello'.respond_to?(:length)
 p 'hello'.respond_to?(:odd?)
+
+p '-------------Rest and Spread operators---------------'
+def multi_arguments_method(first_data, *rest_data)
+	print('Got arguments: ', first_data, ' ', rest_data.join(' '))
+	p ' '
+end
+
+multi_arguments_method("one")	# * »	"Got one and "
+multi_arguments_method("one", "two")	# * »	"Got one and two"
+multi_arguments_method "one", "two", "three"	# * »	"Got one and two, three"
+multi_arguments_method("one", *(2..15)) # * => one 2 3 4 5 6 7 8 9 10 11 12 13 14 15
