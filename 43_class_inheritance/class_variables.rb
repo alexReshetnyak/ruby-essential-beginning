@@ -54,10 +54,3 @@ e = Thingamajiq.new
 
 p Thingamajiq.counter
 p Product.counter
-
-
-p '-------------------'
-require 'date'
-require 'cgi'
-value = (class << Time; MonthValue; end)['JAN']
-p value
