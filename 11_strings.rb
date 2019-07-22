@@ -140,5 +140,5 @@ last_name = name[100, 4]
 # * true
 p last_name.nil?
 
-p '---------Format----------'
+p '---------Format strings----------'
 p "%04d-01" % 123 # * => "0123-01"

@@ -22,3 +22,17 @@ p numbers.size
 p '--------include? method---------'
 p letters_range.include?('b')
 p letters_range === 'c'
+p (1..10) === 3.14159	#* »	true
+
+p '----------To array--------------'
+p (1..6).to_a
+
+p '----------Array methods for ranges--------------'
+digits = 0..9
+digits.include?(5)	#* »	true
+digits.min	#* »	0
+digits.max	#* »	9
+digits.reject {|i| i < 5 }	#* »	[5, 6, 7, 8, 9]
+digits.each do |digit|
+  print(digit, ' ')
+end
