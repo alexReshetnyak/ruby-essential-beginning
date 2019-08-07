@@ -1,6 +1,10 @@
 
 class Product
   @@product_counter = 0
+  
+  def initialize
+    @some_val = '1234'
+  end
 
   def self.counter
     @@product_counter
@@ -18,9 +22,14 @@ class Widget < Product
     @@widget_counter
   end
 
+  def val_get
+    @some_val
+  end
+
   def initialize
     super
     @@widget_counter += 1
+    @some_val = '222'
   end
 end
 
@@ -44,6 +53,7 @@ b = Widget.new
 
 p Widget.counter
 p Product.counter
+p a.val_get
 
 puts
 

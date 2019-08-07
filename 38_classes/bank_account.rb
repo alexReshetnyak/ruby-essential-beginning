@@ -1,7 +1,7 @@
 class BankAccount
 
   def initialize
-    @amount = 5000  
+    @amount = 5000
   end
 
   def status

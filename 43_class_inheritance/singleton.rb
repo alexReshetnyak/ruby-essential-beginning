@@ -28,11 +28,26 @@ p bob.singleton_class # * => #<Class:#<Player:0x0000000002736218>>
 
 
 puts
+p '--------Different way to change singleton methods---------'
+a = 'foo'
+class << a
+  def inspect
+    '"bar"'
+  end
+end
+p a.inspect   # => "bar"
+
+a = 'foo'   # new object, new singleton class
+p a.inspect   # => "foo"
+
+puts
 p '--------Right version of singleton---------'
 
 class Logger
-  private_class_method :new
+  private_class_method :new # ! makes existing method private (new)
+
   @@logger = nil
+
   def Logger.create
     @@logger = new unless @@logger
     @@logger
