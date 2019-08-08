@@ -2,6 +2,10 @@ class Player
   def play_game
     rand(1..100) > 50 ? 'Winner!' : 'Looser!'
   end
+
+  def say_go
+    'Go'
+  end
 end
 
 bob = Player.new
@@ -11,7 +15,7 @@ p bob.play_game
 p alex.play_game
 
 puts
-p '-------------------'
+p '--------rewrite instance method-----------'
 def alex.play_game # * rewrite method for alex
   'Winner!'
 end

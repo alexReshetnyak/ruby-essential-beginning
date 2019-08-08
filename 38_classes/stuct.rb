@@ -1,5 +1,5 @@
 p '----Create a class----'
-require_relative 'app_store'
+require_relative 'app_store' # * require AppStore module
 
 class Gadget
   # attr_writer :password  # * Getter and setter in the same time

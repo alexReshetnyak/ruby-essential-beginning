@@ -18,7 +18,7 @@ end
 class Widget < Product
   @@widget_counter = 0
 
-  def self.counter
+  def self.counter # * static method
     @@widget_counter
   end
 

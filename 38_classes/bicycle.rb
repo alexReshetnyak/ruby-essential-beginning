@@ -8,6 +8,12 @@ class Bicycle
     "Hi there! Use me to create a bicycle object"
   end
 
+  class << self # * another way to create static method
+    def say_go
+      'Go go go'
+    end
+  end
+
   def self.count # * static getter
     @@count
   end
@@ -21,10 +27,11 @@ class Bicycle
   end
 end
 
-p Bicycle.description
-p Bicycle.count
+p Bicycle.description # * => "Hi there! Use me to create a bicycle object"
+p Bicycle.say_go # * => Go go go
+p Bicycle.count # * => 0
 bike = Bicycle.new
-p bike.maker
+p bike.maker # * => "BikeTech"
 
 a = Bicycle.new
 b = Bicycle.new
