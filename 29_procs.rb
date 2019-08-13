@@ -17,7 +17,6 @@ p c_cubes
 p '------Second example-----'
 currencies = [10, 20, 30, 40, 50]
 
-
 to_euros = Proc.new { |currency| currency * 0.95 }
 to_pesos = Proc.new { |currency| currency * 20.70 }
 
@@ -73,7 +72,7 @@ bad_things = proc do |name|
   p "#{name} is a dolt!"
 end
 
-wors_things = ->(name) { p "#{name} is awful" }
+wors_things = ->(name) { p "#{name} is awful" } # * -> equal to Proc.new
 
 def method2(data)
   p data

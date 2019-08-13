@@ -38,3 +38,16 @@ p 'whimper'.sub('m', 's') # * => "whisper"
 # * will change all found character
 p 'an apple'.gsub('a', 'A') # * => "An Apple"
 p "(555)-555 1234".gsub(/[-\s\(\)]/, '') # * => "5555551234"
+
+p '--------interpolation-----------'
+word = 'ama'
+pattern = %r{(?mx)#{word}}
+p phrase.scan(pattern)
+
+p '--------regular expression groups-----------'
+string = "RyanOnRails: This is a test"
+one, two, three = string.match(/(^.*)(:)(.*)/i).captures # * captures returns the array of captures; equivalent to mtch.to_a[1..-1]
+
+p one   #=> "RyanOnRails"
+p two   #=> ":"
+p three #=> " This is a test"

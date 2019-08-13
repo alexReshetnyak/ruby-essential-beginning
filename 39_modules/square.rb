@@ -7,6 +7,10 @@ module Square
   end
 end
 
+puts '----SQUARE--------'
 p Square.area(10)
 p Rectangle.area(10, 5)
 p Circle.area(3)
+
+p Parent::Child::Child2.getSome
+puts '----SQUARE-END----'
