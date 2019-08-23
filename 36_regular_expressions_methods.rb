@@ -45,9 +45,9 @@ pattern = %r{(?mx)#{word}}
 p phrase.scan(pattern)
 
 p '--------regular expression groups-----------'
-string = "RyanOnRails: This is a test"
+string = "RubyOnRails: This is a test"
 one, two, three = string.match(/(^.*)(:)(.*)/i).captures # * captures returns the array of captures; equivalent to mtch.to_a[1..-1]
 
-p one   #=> "RyanOnRails"
+p one   #=> "RubyOnRails"
 p two   #=> ":"
 p three #=> " This is a test"
