@@ -14,16 +14,17 @@ class Car
   end
 
   def compare_car_with(car)
-    self.value > car.value ? 'Your car is better!' : 'Your car is worse'
-
-    p generate_model_name('McLaren')
-    self.model
+    self.value > car.value ? @model + ' is better!' : car.model + ' is better!'
   end
 
   protected # * All methods bellow are protected
 
   def value
     @value
+  end
+
+  def say
+    p @model + ' say Rrrrr'
   end
 
   private
@@ -33,6 +34,14 @@ class Car
   end
 end
 
+class FastCar < Car
+  def say_r
+    say
+  end
+end
+
 civic = Car.new(3, 30000, 'civic')
-fiat = Car.new(1, 20000, 'fiat')
+fiat = Car.new(2, 20000, 'fiat')
+bmw = FastCar.new(1, 10000, 'bmw')
 p civic.compare_car_with(fiat)
+bmw.say_r
