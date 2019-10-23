@@ -101,7 +101,8 @@ p Time.strptime('03-04-2000', '%m-%d-%Y')
 
 puts
 p '--------seconds to time-----------'
-date = Time.strptime('1546576367', '%s').utc
+date = Time.strptime('1571733759', '%s').utc
+# date = Time.strptime('1571733759', '%s')
 p date
 p date.year
 p date.month
@@ -109,3 +110,12 @@ p date.day
 p date.hour
 p date.min
 p date.sec
+
+puts
+p '----time to seconds---'
+date2 = Time.new(date.year, date.month, date.day)
+p date2.to_i
+p date2
+p date2.year
+p date2.month
+p date2.day
