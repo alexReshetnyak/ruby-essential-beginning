@@ -43,6 +43,7 @@ p '--------Integers iterators---------'
 99.downto(95)  { |i| print i, " " }
 50.step(80, 5) { |i| print i, " " }
 
+puts
 p '-------to_i floor ceil round round(2) abs---------'
 p 10.1.to_i
 p 10.1.floor
