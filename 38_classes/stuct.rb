@@ -2,9 +2,9 @@ p '----Create a class----'
 require_relative 'app_store' # * require AppStore module
 
 class Gadget
-  # attr_writer :password  # * Getter and setter in the same time
+  # attr_writer :password  # * setter
   attr_reader :production_number, :apps # * getter
-  attr_accessor :username, :password # * setter
+  attr_accessor :username, :password  # * Getter and setter in the same time
 
   def initialize(username = 'default name', password = 'default password') # * worked like constructor method in JS, it calls every time when we creat new object (private)
     @username = username # * Instance variable (private)

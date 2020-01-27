@@ -124,4 +124,4 @@ puts
 date3 = Date.parse('20180801').strftime('%s')
 p date3
 
-puts Date.parse('201321130')
+# puts Date.parse('201321130')

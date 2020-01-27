@@ -1,10 +1,10 @@
 class Overruler
   def [] (input) # * overwrite standart [] method
-        if input.instance_of?(String)
-          puts "string"
-        else
-          puts "not string"
-        end
+      if input.instance_of?(String)
+        puts "string"
+      else
+        puts "not string"
+      end
    end
 end
 
